@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ticket Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="main-container">
+
+    <!-- Step 1: Modal -->
+    <div class="modal" id="seatModal">
+      <h2>How many seats?</h2>
+      <div class="transport">
+        <!-- Placeholder transport image -->
+        <img src="images/scooter_2.png" alt="Transport">
+      </div>
+      <div class="seat-options">
+        <div class="seat-option" id="option-1">1</div>
+        <div class="seat-option active" id="option-2">2</div>
+        <div class="seat-option" id="option-3">3</div>
+        <div class="seat-option" id="option-4">4</div>
+        <div class="seat-option" id="option-5">5</div>
+      </div>
+      <div class="prices">
+        <div class="price">
+          <h3>PRIME</h3>
+          <p>₹150</p>
+          <p class="available">AVAILABLE</p>
+        </div>
+        <div class="price">
+          <h3>CLASSIC</h3>
+          <p>₹130</p>
+          <p class="available">AVAILABLE</p>
+        </div>
+      </div>
+      <button class="select-btn">Select Seats</button>
+    </div>
+
+    <!-- Step 2: Cinema Hall -->
+    <div class="container">
+  
+      <!-- Seat Legend -->
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-box available"></div>
+          <span class="legend-text">Available</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-box selected"></div>
+          <span class="legend-text">Selected</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-box occupied"></div>
+          <span class="legend-text">Occupied</span>
+        </div>
+      </div>
+
+      <!-- Seat Layout -->
+      <div class="seat-layout">
+
+        <!-- Recilner Seats Section -->
+         <h2>Recliner - ₹220</h2>
+        <div class="seat-section">
+          <div class="row-labels">
+            <div class="row-label">I</div>
+            <div class="row-label">J</div>
+          </div>
+          <div class="seat-grid">
+            <!-- I Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">02</div>
+            <div class="seat available">03</div>
+            <div class="seat available">04</div>
+            <div class="seat occupied">05</div>
+            <div class="seat available">06</div>
+            <div class="seat available">07</div>
+            <div class="seat available">08</div>
+            <div class="seat occupied">09</div>
+            <div class="seat available">10</div>
+            <div class="seat available">11</div>
+            <div class="seat occupied">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat available">20</div>
+            <div class="seat available">21</div>
+            <!-- J Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">02</div>
+            <div class="seat occupied">03</div>
+            <div class="seat available">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat available">07</div>
+            <div class="seat available">08</div>
+            <div class="seat available">09</div>
+            <div class="seat available">10</div>
+            <div class="seat occupied">11</div>
+            <div class="seat occupied">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat available">20</div>
+            <div class="seat available">21</div>       
+          </div>
+        </div>
+
+        <!-- Prime Seats Section -->
+         <h2>Prime - ₹180</h2>
+        <div class="seat-section">
+          <div class="row-labels">
+            <div class="row-label">E</div>
+            <div class="row-label">F</div>
+            <div class="row-label">G</div>
+            <div class="row-label">H</div>
+          </div>
+          <div class="seat-grid">
+            <!-- H Row -->
+            <div class="seat occupied">01</div>
+            <div class="seat available">02</div>
+            <div class="seat available">03</div>
+            <div class="seat available">04</div>
+            <div class="seat available">05</div>
+            <div class="seat occupied">06</div>
+            <div class="seat available">07</div>
+            <div class="seat available">08</div>
+            <div class="seat available">09</div>
+            <div class="seat available">10</div>
+            <div class="seat available">11</div>
+            <div class="seat available">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat occupied">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat occupied">20</div>
+            <div class="seat available">21</div>
+            <!-- G Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">02</div>
+            <div class="seat available">03</div>
+            <div class="seat available">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat occupied">07</div>
+            <div class="seat available">08</div>
+            <div class="seat available">09</div>
+            <div class="seat occupied">10</div>
+            <div class="seat available">11</div>
+            <div class="seat occupied">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat available">20</div>
+            <div class="seat available">21</div>
+            <!-- F Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">02</div>
+            <div class="seat available">03</div>
+            <div class="seat available">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat available">07</div>
+            <div class="seat available">08</div>
+            <div class="seat available">09</div>
+            <div class="seat available">10</div>
+            <div class="seat available">11</div>
+            <div class="seat available">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat available">20</div>
+            <div class="seat available">21</div>
+            <!-- E Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat available">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat available">07</div>
+            <div class="seat available">08</div>
+            <div class="seat available">09</div>
+            <div class="seat available">10</div>
+            <div class="seat available">11</div>
+            <div class="seat available">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat available">21</div>
+           
+            
+          </div>
+        </div>
+
+        <!-- Classic Seats Section -->
+         <h2>Classic - ₹130</h2>
+        <div class="seat-section">
+          <div class="row-labels">
+            <div class="row-label">A</div>
+            <div class="row-label">B</div>
+            <div class="row-label">C</div>
+            <div class="row-label">D</div>
+          </div>
+          <div class="seat-grid">
+            <!-- D Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">02</div>
+            <div class="seat available">03</div>
+            <div class="seat available">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat occupied">07</div>
+            <div class="seat occupied">08</div>
+            <div class="seat occupied">09</div>
+            <div class="seat occupied">10</div>
+            <div class="seat available">11</div>
+            <div class="seat available">12</div>
+            <div class="seat occupied">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat available">20</div>
+            <div class="seat available">21</div>
+            <!-- C Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">02</div>
+            <div class="seat available">03</div>
+            <div class="seat available">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat available">07</div>
+            <div class="seat available">08</div>
+            <div class="seat available">09</div>
+            <div class="seat available">10</div>
+            <div class="seat available">11</div>
+            <div class="seat available">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat occupied">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat available">20</div>
+            <div class="seat occupied">21</div>
+            <!-- B Row -->
+            <div class="seat available">01</div>
+            <div class="seat available">02</div>
+            <div class="seat occupied">03</div>
+            <div class="seat occupied">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat available">07</div>
+            <div class="seat available">08</div>
+            <div class="seat occupied">09</div>
+            <div class="seat available">10</div>
+            <div class="seat available">11</div>
+            <div class="seat available">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat available">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">19</div>
+            <div class="seat available">20</div>
+            <div class="seat available">21</div>
+            <!-- A Row -->
+             <div class="seat available">01</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat occupied">04</div>
+            <div class="seat available">05</div>
+            <div class="seat available">06</div>
+            <div class="seat available">07</div>
+            <div class="seat occupied">08</div>
+            <div class="seat occupied">09</div>
+            <div class="seat available">10</div>
+            <div class="seat available">11</div>
+            <div class="seat available">12</div>
+            <div class="seat available">13</div>
+            <div class="seat available">14</div>
+            <div class="seat occupied">15</div>
+            <div class="seat available">16</div>
+            <div class="seat available">17</div>
+            <div class="seat available">18</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat available">&#9855;</div>
+            <div class="seat available">21</div>
+
+          </div>
+        </div>
+
+         
+      </div>
+
+            <!-- Movie Screen -->
+      <div class="screen">
+        <span>Screen</span>
+      </div>
+
+      <!-- Booking Summary and Button -->
+      <div class="summary">
+        You have selected <span id="seat-count" class="highlight">0</span> seats for a total of <span id="total-price"
+          class="highlight">₹0</span>.
+      </div>
+      <button id="book-button" class="book-button" disabled>Book Now</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
